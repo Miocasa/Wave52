@@ -1,10 +1,6 @@
 #include "PowerManager.h"
 
 
-void PowerManagerBase::power_off()
-{
-}
-
 void PowerManagerBase::add_wake_pin(uint8_t pin, uint8_t reason)
 {
 }
@@ -13,24 +9,20 @@ void PowerManagerBase::print_reset_reason()
 {
 }
 
-std::set<irq_pin_cfg> NRFPowerManager::_wake_pins;
-
-void NRFPowerManager::power_off()
+void PowerManagerBase::power_off()
 {
-	LOG_LV1("Power", "Going to sleep now... (System OFF)");
-	delay(50);
-
-	for (const auto& pin : _wake_pins)
-		nrf_gpio_cfg_sense_input(
-			g_ADigitalPinMap[pin.pin],
-			NRF_GPIO_PIN_PULLUP,
-			pin.reason == FALLING ? NRF_GPIO_PIN_SENSE_LOW : NRF_GPIO_PIN_SENSE_HIGH
-		);
-
-	NRF_POWER->SYSTEMOFF = 1;
-
-	while (1) { __WFE(); }
 }
+
+void PowerManagerBase::reset()
+{
+}
+
+void PowerManagerBase::enterBootloader()
+{
+}
+
+
+std::set<irq_pin_cfg> NRFPowerManager::_wake_pins;
 
 void NRFPowerManager::add_wake_pin(uint8_t pin, uint8_t reason)
 {
@@ -62,4 +54,32 @@ void NRFPowerManager::print_reset_reason()
 	}
 
 	NRF_POWER->RESETREAS = reason;
+}
+
+
+void NRFPowerManager::power_off()
+{
+	LOG_LV1("Power", "Going to sleep now... (System OFF)");
+	delay(50);
+
+	for (const auto& pin : _wake_pins)
+		nrf_gpio_cfg_sense_input(
+			g_ADigitalPinMap[pin.pin],
+			NRF_GPIO_PIN_PULLUP,
+			pin.reason == FALLING ? NRF_GPIO_PIN_SENSE_LOW : NRF_GPIO_PIN_SENSE_HIGH
+		);
+
+	NRF_POWER->SYSTEMOFF = 1;
+
+	while (1) { __WFE(); }
+}
+
+void NRFPowerManager::reset()
+{
+	NVIC_SystemReset();
+}
+
+void NRFPowerManager::enterBootloader()
+{
+	enterUf2Dfu();
 }

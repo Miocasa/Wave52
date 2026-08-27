@@ -26,9 +26,12 @@ class PowerManagerBase
 public:
 	PowerManagerBase() = default;
 	virtual ~PowerManagerBase() = default;
-	virtual void power_off();
+
 	virtual void add_wake_pin(uint8_t pin, uint8_t reason);
 	virtual void print_reset_reason();
+	virtual void power_off();
+	virtual void reset();
+	virtual void enterBootloader();
 };
 
 class NRFPowerManager : PowerManagerBase
@@ -37,9 +40,13 @@ public:
 	NRFPowerManager() = default;
 	~NRFPowerManager() override = default;
 
-	void power_off() override;
+
 	void add_wake_pin(uint8_t pin, uint8_t reason) override;
 	void print_reset_reason() override;
+
+	void power_off() override;
+	void reset() override;
+	void enterBootloader() override;
 
 private:
 	static std::set<irq_pin_cfg> _wake_pins;

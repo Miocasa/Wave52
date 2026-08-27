@@ -24,6 +24,4 @@ private:
 	bool _rtc_ready = false;
 	RTC_DS3231 _rtc;
 };
-
-
 #endif //EINK_EXTERNALRTC_H

@@ -6,25 +6,21 @@
 #include <GxEPD2_4G_4G.h>
 #include <bits/locale_classes.h>
 
-#include <Fonts/FreeSansBold12pt7b.h>
-#include <Fonts/Picopixel.h>
-#include <Fonts/minecraft_enchantment8pt7b.h>
 
 #include "nrf_power.h"
 #include "nrf_gpio.h"
 #include "config.h"
 #include <RTClib.h>
 
+#include "DisplayManager.h"
 #include "ExternalRTC.h"
+#include "Externs.h"
 #include "PowerManager.h"
 
-// WeAct Studio 4.2" = GDEY042T81, SSD1683, 400x300
-GxEPD2_4G_4G<GxEPD2_420_GDEY042T81, GxEPD2_420_GDEY042T81::HEIGHT>
-display(GxEPD2_420_GDEY042T81(EPD_CS_PIN, EPD_DC_PIN, EPD_RST_PIN, EPD_BUSY_PIN));
-
-ExternalRTC ex_rtc;
+DisplayManager display(EPD_CS_PIN, EPD_DC_PIN, EPD_RST_PIN, EPD_BUSY_PIN);
+ExternalRTC externalRTC;
 NRFPowerManager power;
-void showGrayGradient();
+
 
 bool btn_st = false;
 
@@ -78,7 +74,7 @@ void setup()
 
 	pinMode(WAKE_BUTTON_PIN, INPUT_PULLUP);
 
-	ex_rtc.begin();
+	externalRTC.begin();
 
 	configure_nfc_pins();
 
@@ -87,7 +83,7 @@ void setup()
 	display.init(115200, true, 50, false);
 	display.setRotation(0);
 
-	showGrayGradient();
+	display.test();
 	// showTimePartial();
 }
 
@@ -96,19 +92,17 @@ void loop()
 	char cmd = Serial.read();
 	if (cmd == 'b')
 	{
-		enterUf2Dfu();
-		// enterSerialDfu();
+		power.enterBootloader();
 	}
 	if (cmd == 'r')
 	{
-		NVIC_SystemReset();
-		// enterOTADfu();
+		power.reset();
 	}
 	if (btn_st)
 	{
 		// prv_time = now;
 		btn_st = false;
-		showGrayGradient();
+		display.test();
 	}
 	static uint32_t prv_time = millis();
 	uint32_t now = millis();
@@ -119,33 +113,4 @@ void loop()
 }
 
 
-void showGrayGradient()
-{
-	display.setTextColor(GxEPD_BLACK);
-	display.setFont(&FreeSansBold12pt7b);
-	display.setTextSize(1);
-	DateTime now = ex_rtc.get_time();
-	char buf[30];
-	sprintf(buf, "Time %02d:%02d:%02d", now.hour(), now.minute(), now.second());
-
-	uint16_t tbw, tbh;
-	int16_t tbx, tby;
-	display.getTextBounds(buf, 0, 0, &tbx, &tby, &tbw, &tbh);
-	int16_t x = (display.width() - tbw) / 2 - tbx;
-	int16_t y = (display.height() - tbh) / 2 - tby;
-
-	display.setFullWindow();
-	display.firstPage();
-
-	do
-	{
-		display.fillScreen(GxEPD_WHITE);
-		display.setCursor(x, y);
-		display.print(buf);
-		// display.print("XIAO nRF52 2bit demo");
-	}
-	while (display.nextPage());
-
-	display.hibernate();
-}
 

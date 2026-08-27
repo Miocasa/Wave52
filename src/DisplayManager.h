@@ -5,13 +5,38 @@
 #ifndef EINK_DISPLAYMANAGER_H
 #define EINK_DISPLAYMANAGER_H
 #include <config.h>
-
 #include "display_detection.h"
 
+#include <Fonts/FreeSansBold12pt7b.h>
+#include <Fonts/Picopixel.h>
+#include <Fonts/minecraft_enchantment8pt7b.h>
 
-class DisplayManager : GxEPD2_4G_4G<_display, _display::HEIGHT>
+
+class DisplayEpdHolder
 {
-	GxEPD2_4G_4G
+public:
+	virtual ~DisplayEpdHolder() = default;
+
+protected:
+	DisplayEpdHolder(int16_t cs, int16_t dc, int16_t rst, int16_t busy)
+		: _epd(cs, dc, rst, busy)
+	{
+	}
+
+	_display _epd;
+};
+
+
+class DisplayManager : private DisplayEpdHolder, public _displayBase<_display, _display::HEIGHT>
+{
+public:
+	DisplayManager(int16_t cs, int16_t dc, int16_t rst, int16_t busy);
+	~DisplayManager() override = default;
+
+	void drawWidgets();
+	void test();
+
+private:
 };
 
 

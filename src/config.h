@@ -1,7 +1,7 @@
 #pragma once
 
 
-#define Display Weact4_2__2bit
+#define Weact4_2_2bit
 
 
 #define SEC_TO_MS(s) (s * 1000)
