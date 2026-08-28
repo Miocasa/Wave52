@@ -10,6 +10,8 @@
 #include <Fonts/FreeSansBold12pt7b.h>
 #include <Fonts/Picopixel.h>
 #include <Fonts/minecraft_enchantment8pt7b.h>
+#include <Fonts/minecraft_enchantment20pt7b.h>
+// struct
 
 
 class DisplayEpdHolder
