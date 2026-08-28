@@ -6,6 +6,8 @@
 // #include "ExternalRTC.h"
 #include "Externs.h"
 #include "image_2bpp.h"
+#include "Widgets/TextBox.h"
+#include "Widgets/Widget.h"
 
 
 DisplayManager::DisplayManager(int16_t cs, int16_t dc, int16_t rst, int16_t busy)
@@ -16,12 +18,64 @@ DisplayManager::DisplayManager(int16_t cs, int16_t dc, int16_t rst, int16_t busy
 {
 }
 
+// VAligns::Center, HAligns::Center
+// VAligns::Center, HAligns::Center
 void DisplayManager::drawWidgets()
 {
+	// const char* buf = "";
+	this->fillRect(0, 0, this->width(), this->height(), GxEPD_WHITE);
+
+	this->drawPixel(10, 10, GxEPD_BLACK);
+
+
+	// int16_t w = 200;
+	// int16_t h = 200;
+	// int16_t x = 20;
+	// int16_t y = 100;
+	int16_t w = width();
+	int16_t h = height();
+	int16_t x = 0;
+	int16_t y = 0;
+	this->drawRect(x, y, w, h, GxEPD_BLACK);
+
+	VAligns va[] = {VAligns::Top, VAligns::Center, VAligns::Bottom};
+	HAligns ha[] = {HAligns::Left, HAligns::Center, HAligns::Right};
+	for (auto& i : va)
+		for (auto& j : ha)
+		{
+			Widget* text = new TextBox("text", x, y, w, h, {
+				                           GxEPD_BLACK, 1, &minecraft_enchantment20pt7b, i, j
+			                           });
+			text->draw(this);
+			delete text;
+		}
+
+	// uint16_t w = 200;
+	// uint16_t h = 200;
+	// this->drawRect(20, 100, w, h, GxEPD_BLACK);
+	// // Widget* text = new TextBox("text", 20, 100, w, h, {
+	// // 	                           GxEPD_BLACK, 1, &minecraft_enchantment8pt7b, VAligns::Top, HAligns::Center,
+	// //                            });
+	//
+	// // Widget* text = new TextBox("dasd", 20, 100, w, h, {
+	// // 	                           GxEPD_BLACK, 1, &minecraft_enchantment8pt7b, VAligns::Center, HAligns::Center,
+	// //                            });
+	//
+	// Widget* text = new TextBox("abcd", 20, 100, w, h, {
+	// 	                           GxEPD_BLACK, 1, &minecraft_enchantment8pt7b, VAligns::Bottom, HAligns::Center,
+	//                            });
+
+	// text->draw(this);
+	// delete text;
+
+	this->display();
 }
 
 void DisplayManager::test()
 {
+	drawWidgets();
+	return;
+
 	DateTime now = externalRTC.get_time();
 	char buf[30];
 	sprintf(buf, "Time %02d:%02d:%02d", now.hour(), now.minute(), now.second());
@@ -36,13 +90,12 @@ void DisplayManager::test()
 	this->getTextBounds(buf, 0, 0, &tbx, &tby, &tbw, &tbh);
 	int16_t x = (width() - tbw) / 2 - tbx;
 	int16_t y = (height() - tbh) / 2 - tby;
-
 	this->setFullWindow();
 	this->firstPage();
 	do
 	{
 		// this->fillRect(0, 0, width(), height(), GxEPD_WHITE);
-		this->drawGreyPixmap(my_2bpp_bitmap, 2, 0, 0, 400, 300);
+		// this->drawGreyPixmap(my_2bpp_bitmap, 2, 0, 0, 400, 300);
 
 		this->setCursor(x, y);
 		this->print(buf);
