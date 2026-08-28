@@ -43,7 +43,7 @@ public:
 	uint16_t getHeight() const;
 
 	virtual void draw(DisplayManager* display) = 0;
-
+	// TODO partial screen update for one bit
 private:
 	int16_t _x;
 	int16_t _y;
