@@ -6,7 +6,6 @@
 #include <GxEPD2_4G_4G.h>
 #include <bits/locale_classes.h>
 
-
 #include "nrf_power.h"
 #include "nrf_gpio.h"
 #include "config.h"
@@ -83,7 +82,7 @@ void setup()
 	display.init(115200, true, 50, false);
 	display.setRotation(0);
 
-	display.test();
+	display.update();
 	// showTimePartial();
 }
 
@@ -102,7 +101,7 @@ void loop()
 	{
 		// prv_time = now;
 		btn_st = false;
-		display.test();
+		display.update();
 	}
 	static uint32_t prv_time = millis();
 	uint32_t now = millis();

@@ -5,12 +5,11 @@
 #ifndef EINK_DISPLAYMANAGER_H
 #define EINK_DISPLAYMANAGER_H
 #include <config.h>
-#include "display_detection.h"
+#include <memory>
+#include <vector>
 
-#include <Fonts/FreeSansBold12pt7b.h>
-#include <Fonts/Picopixel.h>
-#include <Fonts/minecraft_enchantment8pt7b.h>
-#include <Fonts/minecraft_enchantment20pt7b.h>
+#include "display_detection.h"
+#include "Widgets/Widget.h"
 // struct
 
 
@@ -36,9 +35,12 @@ public:
 	~DisplayManager() override = default;
 
 	void drawWidgets();
-	void test();
-
+	void update();
 private:
+	std::vector<std::unique_ptr<Widget>> _widgets;
+
+protected:
+	void testGrid();
 };
 
 

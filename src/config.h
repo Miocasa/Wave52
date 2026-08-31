@@ -7,7 +7,11 @@
 #define SEC_TO_MS(s) (s * 1000)
 
 // --- E-ink pins---
-#define EPD_BUSY_PIN   D9
+// #define EPD_MOSI_PIN   D10
+// #define EPD_MISO_PIN   D9
+// #define EPD_SCK_PIN    D8
+
+#define EPD_BUSY_PIN   D9 // TODO change pin it conflict with
 #define EPD_RST_PIN    D7
 #define EPD_DC_PIN     PIN_NFC2
 #define EPD_CS_PIN     PIN_NFC1

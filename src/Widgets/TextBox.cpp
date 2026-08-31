@@ -4,56 +4,92 @@
 
 #include "TextBox.h"
 
-
-TextBox::TextBox(const char* str, int16_t x, int16_t y, uint16_t w, uint16_t h, text_box_cfg config)
-	: Widget(x, y, w, h), _text(str), _config(config)
+TextBox::TextBox(const char* str, int16_t x, int16_t y, uint16_t w, uint16_t h, uint16_t color,
+                 uint16_t bg_color, uint8_t font_size, Fonts font,
+                 VAligns valign, HAligns halign)
+	: Widget(x, y, w, h, color, bg_color, WIDGET_TYPE_TEXT_BOX),
+	  _size(0),
+	  _font_size(font_size),
+	  _font_id(font),
+	  _valign(valign),
+	  _halign(halign),
+	  _font(getFontById(_font_id))
 {
+	_buffer[0] = '\0';
+	this->str(str);
 }
+
+const char* TextBox::str() { return _buffer; }
+uint8_t TextBox::font_size() { return _font_size; }
+size_t TextBox::size() { return _size; }
+Fonts TextBox::font() { return _font_id; }
+VAligns TextBox::valign() { return _valign; }
+HAligns TextBox::halign() { return _halign; }
+
+void TextBox::str(const char* str)
+{
+	if (!str)
+	{
+		_buffer[0] = '\0';
+		_size = 0;
+		return;
+	}
+	strncpy(_buffer, str, TEXT_BUFFER_SIZE - 1);
+	_buffer[TEXT_BUFFER_SIZE - 1] = '\0';
+	_size = strlen(_buffer);
+}
+
+void TextBox::font_size(uint8_t font_size) { _font_size = font_size; }
+void TextBox::font(Fonts font) { _font_id = font; }
+void TextBox::valign(VAligns valign) { _valign = valign; }
+void TextBox::halign(HAligns halign) { _halign = halign; }
 
 void TextBox::draw(DisplayManager* display)
 {
-	display->setFont(_config.font);
-	display->setTextColor(_config.color);
-	display->setTextSize(_config.size);
-	int16_t y, x;
+	// TODO: Char by char output
+	// TODO partial screen update for one bit
+	display->setFont(_font);
+	display->setTextColor(color());
+	display->setTextSize(_font_size);
+	int16_t cy, cx;
 
 	int16_t x0, y0;
 	uint16_t w, h;
-	display->getTextBounds(_text, this->getX(), this->getY(), &x0, &y0, &w, &h);
-	const int16_t ascent = getY() - y0;
+	display->getTextBounds(_buffer, this->x(), this->y(), &x0, &y0, &w, &h);
+	const int16_t ascent = y() - y0;
 
-	const int16_t descent = h - ascent;
-
-	switch (_config.valign)
+	switch (_valign)
 	{
 	default:
 	case VAligns::Top:
-		y = this->getY() + ascent;
+		cy = this->y() + ascent;
 		break;
 	case VAligns::Center:
-		y = this->getY() + this->getHeight() / 2 + ascent / 2;
+		cy = this->y() + this->height() / 2 + ascent / 2;
 		break;
 	case VAligns::Bottom:
-		y = this->getY() + this->getHeight() + ascent - h;
+		cy = this->y() + this->height() + ascent - h;
 		break;
 	}
 
-	switch (_config.halign)
+	switch (_halign)
 	{
 	default:
 	case HAligns::Left:
-		x = this->getX();
+		cx = this->x();
 		break;
 	case HAligns::Center:
-		x = this->getX() + (this->getWidth() - w) / 2;
+		cx = this->x() + (this->width() - w) / 2;
 		break;
 	case HAligns::Right:
-		x = this->getX() + this->getWidth() - w;
+		cx = this->x() + this->width() - w;
 		break;
 	}
-	Serial.printf("  cursor_y=%d (h - ascent)=%d  display_h=%d\n", y, h - ascent, this->getHeight());
-	Serial.printf("  text top=%d  text height=%d text bot=%d\n", y - ascent, h, y - ascent + h);
 
-	display->setCursor(x, y);
-	display->print(_text);
+	display->setCursor(cx, cy);
+	display->print(_buffer);
+}
+
+void TextBox::partialDraw(DisplayManager* display)
+{
 }
