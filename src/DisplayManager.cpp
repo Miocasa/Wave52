@@ -12,26 +12,38 @@
 #include "Widgets/Widget.h"
 #include <Fonts/FreeSans24pt7b.h>
 
+// class SaveManager;
+// SaveManager saveManager;
+
 DisplayManager::DisplayManager(int16_t cs, int16_t dc, int16_t rst, int16_t busy)
 	: DisplayEpdHolder(cs, dc, rst, busy),
 	  _displayBase<_display, _display::HEIGHT>(_epd)
 {
 }
 
-void DisplayManager::drawWidgets()
+/*void DisplayManager::drawWidgets() // deprecated
 {
+	// widgetManager.drawBackground();
+	// widgetManager.drawWidgets();
+	//
+	//
+	// return;
+
+	update();
+	return;
+
 	DateTime now = externalRTC.get_time();
 	char buf[30];
 	sprintf(buf, "Time %02d:%02d:%02d", now.hour(), now.minute(), now.second());
 
-	int16_t w = width();
-	int16_t h = height();
-	int16_t x = 0;
-	int16_t y = 0;
+	int16_t w = set_width();
+	int16_t h = set_height();
+	int16_t set_x = 0;
+	int16_t set_y = 0;
 
 	this->fillRect(0, 0, w, h, GxEPD_WHITE);
 	std::unique_ptr<Widget> text = std::unique_ptr<TextBox>(
-		new TextBox(buf, x, y, w, h, GxEPD_BLACK,GxEPD_WHITE, 2,
+		new TextBox(buf, set_x, set_y, w, h, GxEPD_BLACK,GxEPD_WHITE, 2,
 		            Fonts::Monocraft9pt7b_ID, VAligns::Center,
 		            HAligns::Center)
 	);
@@ -48,43 +60,12 @@ void DisplayManager::drawWidgets()
 
 	this->display();
 	this->hibernate();
-}
+} //! deprecated*/
 
 void DisplayManager::update()
 {
-	drawWidgets();
-}
-
-void DisplayManager::testGrid()
-{
-	// const char* buf = "";
-	this->fillRect(0, 0, this->width(), this->height(), GxEPD_WHITE);
-
-	this->drawPixel(10, 10, GxEPD_BLACK);
-
-
-	// int16_t get_w = 200;
-	// int16_t get_h = 200;
-	// int16_t _x = 20;
-	// int16_t _y = 100;
-	int16_t w = width();
-	int16_t h = height();
-	int16_t x = 0;
-	int16_t y = 0;
-	this->drawRect(x, y, w, h, GxEPD_BLACK);
-
-	VAligns va[] = {VAligns::Top, VAligns::Center, VAligns::Bottom};
-	HAligns ha[] = {HAligns::Left, HAligns::Center, HAligns::Right};
-
-	auto font = static_cast<uint8_t>(Fonts::FreeMono9pt7b_ID);
-	for (auto& i : va)
-		for (auto& j : ha)
-		{
-			std::unique_ptr<Widget> text = std::unique_ptr<TextBox>(
-				new TextBox("str", x, y, w, h, GxEPD_BLACK,GxEPD_WHITE, 3, static_cast<Fonts>(font++), i, j)
-			);
-			text->draw(this);
-		}
-
-	this->display();
+	widgetManager.draw();
+	// DateTime now = externalRTC.get_time();
+	// char buf[30];
+	// sprintf(buf, "Time %02d:%02d:%02d", now.hour(), now.minute(), now.second());
 }

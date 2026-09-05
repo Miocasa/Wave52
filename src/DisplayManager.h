@@ -5,11 +5,8 @@
 #ifndef EINK_DISPLAYMANAGER_H
 #define EINK_DISPLAYMANAGER_H
 #include <config.h>
-#include <memory>
-#include <vector>
-
 #include "display_detection.h"
-#include "Widgets/Widget.h"
+// #include <Externs.h>
 // struct
 
 
@@ -34,10 +31,10 @@ public:
 	DisplayManager(int16_t cs, int16_t dc, int16_t rst, int16_t busy);
 	~DisplayManager() override = default;
 
-	void drawWidgets();
+	// void drawWidgets();
 	void update();
+
 private:
-	std::vector<std::unique_ptr<Widget>> _widgets;
 
 protected:
 	void testGrid();
