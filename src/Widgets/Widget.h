@@ -7,28 +7,10 @@
 #include <Arduino.h>
 #include <display_detection.h>
 
+#include "widget_t.h"
+
 class DisplayManager;
 
-
-enum widget_types : uint8_t
-{
-	WIDGET_TYPE_NONE = 0,
-	WIDGET_TYPE_TEXT_BOX = 1,
-};
-
-enum class HAligns : uint8_t
-{
-	Left = 0,
-	Center = 1,
-	Right = 2
-};
-
-enum class VAligns : uint8_t
-{
-	Top = 0,
-	Center = 1,
-	Bottom = 2,
-};
 
 /*
 struct widget_cfg
@@ -36,22 +18,8 @@ struct widget_cfg
 	uint8_t _type;
 	int16_t _x, _y;
 	uint16_t get_w, get_h;
-	uint16_t color;
-	uint16_t bg_color;
-
-	widget_cfg(uint8_t _type, int16_t _x, int16_t _y, uint16_t get_w, uint16_t get_h, uint16_t color = GxEPD_BLACK,
-	           uint16_t bg_color = GxEPD_WHITE)
-		: _type(_type), _x(_x), _y(_y), get_w(get_w), get_h(get_h), color(color), bg_color(bg_color)
-	{
-	}
-
-	~widget_cfg() = default;
-
-	void debugPrint() const
-	{
-		Serial.printf("{\n  _type=%d\n  _x=%d,_y=%d\n  get_w=%d,get_h=%d\n  color=0x%X,bg_color=0x%X\n}\n",
-		              _type, _x, _y, get_w, get_h, color, bg_color);
-	}
+	uint16_t set_color;
+	uint16_t set_bg_color;
 };
 */
 
@@ -60,34 +28,90 @@ class Widget // base class for widgets
 public:
 	Widget(int16_t x, int16_t y, uint16_t w, uint16_t h,
 	       uint16_t color = GxEPD_BLACK,
-	       uint16_t bg_color = GxEPD_WHITE, uint8_t type = WIDGET_TYPE_NONE);
+	       uint16_t bg_color = GxEPD_WHITE, WidgetTypes type = WidgetTypes::NONE);
 	virtual ~Widget() = default;
 
 	// Getters
-	uint8_t type() const; // get type
-	int16_t x() const; // get get_x
-	int16_t y() const; // get get_y
-	uint16_t width() const; // get width
-	uint16_t height() const; // get height
-	uint16_t color() const; // get color
-	uint16_t bg_color() const; // get bg_color
+	WidgetTypes get_type() const; // get set_type
+	int16_t get_x() const; // get set_x
+	int16_t get_y() const; // get set_y
+	uint16_t get_width() const; // get set_width
+	uint16_t get_height() const; // get set_height
+	uint16_t get_color() const; // get set_color
+	uint16_t get_bg_color() const; // get set_bg_color
 
 	// Setters
-	void type(uint8_t type);
-	void x(int16_t x);
-	void y(int16_t y);
-	void width(uint16_t width);
-	void height(uint16_t height);
-	void color(uint16_t color);
-	void bg_color(uint16_t bg_color);
+
+	/**********************************************************************/
+	/**
+	 * @brief  Set widget type, needed for safe manager
+	 * @param  type		enum(uint8_t) value from widget_types
+	 */
+	void set_type(WidgetTypes type);
+
+	/**********************************************************************/
+	/**
+	 * @brief  Set widget x coordinates
+	 * @param  x in pixels
+	 */
+	void set_x(int16_t x);
+	/**********************************************************************/
+	/**
+	 * @brief  Set widget y coordinates
+	 * @param  y in pixels
+	 */
+	void set_y(int16_t y);
+
+	/**********************************************************************/
+	/**
+	 * @brief  Set widget width
+	 * @param  width in pixels
+	 */
+	void set_width(uint16_t width);
+
+	/**********************************************************************/
+	/**
+	 * @brief  Set widget height
+	 * @param  height in pixels
+	 */
+	void set_height(uint16_t height);
+
+	/**********************************************************************/
+	/**
+	 * @brief  Set widget main color
+	 * @param  color GxEDP color
+	 */
+	void set_color(uint16_t color);
+	/**********************************************************************/
+	/**
+	 * @brief  Set widget background color
+	 * @param  bg_color GxEDP color
+	 */
+	void set_bg_color(uint16_t bg_color);
 
 
-	// virtual void printConfigSerial();
+	/**********************************************************************/
+	/**
+	 * @brief  Draw full widget body
+	 * @param  display	DisplayManager ptr to self draw widget content to display buffer
+	 */
 	virtual void draw(DisplayManager* display) = 0;
+
+	/**********************************************************************/
+	/**
+	 * @brief  Partial update display work, only with widget where it implemented, works only with one bit background
+	 * @param  display	DisplayManager ptr to self draw widget content to display buffer
+	 */
 	virtual void partialDraw(DisplayManager* display) = 0; // TODO partial screen update for one bit
 
+	/**********************************************************************/
+	/**
+	 * @brief  Update widget data, like time, battery and sensor values.
+	 */
+	virtual void tick() = 0;
+
 private:
-	uint8_t _type;
+	WidgetTypes _type;
 	int16_t _x, _y;
 	uint16_t _w, _h;
 	uint16_t _color;
@@ -96,36 +120,3 @@ private:
 
 
 #endif //EINK_WIDGET_H
-
-
-// struct widget_cfg
-// {
-// private:
-// 	uint8_t _type;
-// 	int16_t _x, _y;
-// 	uint16_t _w, _h;
-// 	uint16_t _color;
-// 	uint16_t _bg_color;
-//
-// public:
-// 	widget_cfg(uint8_t _type, int16_t _x, int16_t _y, uint16_t get_w, uint16_t get_h, uint16_t color = GxEPD_BLACK,
-// 			   uint16_t bg_color = GxEPD_WHITE)
-// 		: _type(_type), _x(_x), _y(_y), _w(get_w), _h(get_h), _color(color), _bg_color(bg_color)
-// 	{
-// 	}
-//
-// 	uint8_t _type() const { return _type; }
-// 	int16_t _x() const { return _x; }
-// 	int16_t _y() const { return _y; }
-// 	uint16_t get_w() const { return _w; }
-// 	uint16_t get_h() const { return _h; }
-// 	uint16_t color() const { return _color; }
-// 	uint16_t bg_color() const { return _bg_color; }
-// 	void _type(uint8_t _type);
-// 	void _x(int16_t _x);
-// 	void _y(int16_t _y);
-// 	void get_w(uint16_t get_w);
-// 	void get_h(uint16_t get_h);
-// 	void color(uint16_t color);
-// 	void bg_color(uint16_t color);
-// };
