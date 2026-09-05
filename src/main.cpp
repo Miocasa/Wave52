@@ -19,7 +19,8 @@
 DisplayManager display(EPD_CS_PIN, EPD_DC_PIN, EPD_RST_PIN, EPD_BUSY_PIN);
 ExternalRTC externalRTC;
 NRFPowerManager power;
-
+WidgetManager widgetManager(&display);
+SaveManager saveManager;
 
 bool btn_st = false;
 
@@ -61,6 +62,8 @@ void setup()
 	Serial.begin(115200);
 	delay(200);
 
+	pinMode(WAKE_BUTTON_PIN, INPUT_PULLUP);
+	pinMode(WAKE_DS3231_PIN, INPUT_PULLUP);
 	attachInterrupt(WAKE_BUTTON_PIN, button_irq, FALLING);
 	attachInterrupt(WAKE_DS3231_PIN, ds3231_irq, FALLING);
 	power.add_wake_pin(WAKE_BUTTON_PIN, FALLING);
@@ -71,14 +74,13 @@ void setup()
 	// {
 	// }
 
-	pinMode(WAKE_BUTTON_PIN, INPUT_PULLUP);
-
 	externalRTC.begin();
 
 	configure_nfc_pins();
 
-	SPI.begin();
+	saveManager.begin();
 
+	SPI.begin();
 	display.init(115200, true, 50, false);
 	display.setRotation(0);
 
@@ -88,23 +90,48 @@ void setup()
 
 void loop()
 {
+	static uint32_t prv_time = millis();
+	uint32_t now = millis();
+	static String path;
+
 	char cmd = Serial.read();
-	if (cmd == 'b')
+	switch (cmd)
 	{
+	case 'b':
 		power.enterBootloader();
-	}
-	if (cmd == 'r')
-	{
+		break;
+	case 'r':
 		power.reset();
+		break;
+	case 's':
+		Serial.println("Saving...");
+		path = "/v1_test/";
+		if (widgetManager.saveScreenToLFS(path.c_str()))
+			Serial.println("Saved to \"" + path + "\" successfully");
+		else
+			Serial.println("Failed to save \"" + path);
+		prv_time = now;
+		break;
+	case 'l':
+		Serial.println("Loading...");
+		path = "/v1_test/";
+		if (widgetManager.loadScreenFromLFS(path.c_str()))
+			Serial.println("Loaded to \"" + path + "\" successfully");
+		else
+			Serial.println("Failed to load \"" + path);
+		prv_time = now;
+		break;
+	default: break;
 	}
+
 	if (btn_st)
 	{
-		// prv_time = now;
+		prv_time = now;
 		btn_st = false;
 		display.update();
 	}
-	static uint32_t prv_time = millis();
-	uint32_t now = millis();
+
+
 	if (now - prv_time > SLEEP_DELAY_MS)
 	{
 		power.power_off();
