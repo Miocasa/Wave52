@@ -34,10 +34,9 @@ public:
 	// void drawWidgets();
 	void update();
 
-private:
-
-protected:
-	void testGrid();
+	void writeImage_4G(const uint8_t* bitmap, uint8_t bpp,
+	                   int16_t x, int16_t y, int16_t w, int16_t h,
+	                   bool invert = false, bool mirror_y = false, bool pgm = false);
 };
 
 
