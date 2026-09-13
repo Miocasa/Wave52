@@ -7,10 +7,17 @@ displays, (you can see it in `DisplayManager.h` and `display_detection.h`)
 
 ### TODO:
 
-- [ ] Make widget system
-- [ ] Load and save screen presets to `InternalFs`
-- [ ] Make ble connection and application or web app for a start
-- [ ] Make pretty `readme.md`
+- First stage tasks
+    - [*] Make widget system
+    - [*] Load and save screen presets to `InternalFs` or `QSPIFileSystem`
+    - [ ] Loading screen from `config.bin` file or default for case when it unavailable.
+    - [ ] Make ble connection and application or web app for a start
+    - [ ] Ble connection and services
+- TextBox
+    - [ ] Parsing string for arguments in TextBox widget.
+    - [ ] Byte to byte string output to match given space
+- Low priority
+    - [ ] Make prettier `readme.md`
 
 ### Support
 
