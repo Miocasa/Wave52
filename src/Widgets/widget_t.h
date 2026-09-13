@@ -54,7 +54,7 @@ struct text_box_t
 struct bg_image_t
 {
 	uint8_t bpp; // bits per pixel, 1 bit or 2 bit bitmap set_color depth
-
+	size_t size;
 	// const char* bitmap; // write separated
 };
 
