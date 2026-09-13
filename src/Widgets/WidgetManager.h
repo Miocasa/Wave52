@@ -22,8 +22,7 @@ public:
 	void drawWidgets();
 	void drawBackground();
 
-	void setBackground(BackgroundImage* background);
-	void setBackground(std::shared_ptr<BackgroundImage> background);
+	void setBackground(const char* path);
 	void addWidget(std::shared_ptr<Widget> widget);
 	void addWidget(Widget* widget);
 	void removeWidget(const std::shared_ptr<Widget>& widget);
@@ -33,10 +32,15 @@ public:
 	bool saveScreenToLFS(const char* path);
 	bool loadScreenFromLFS(const char* path);
 
+	bool loadLastScreen();
+
+	void loadDefaultScreen();
+	// void test();
+
 private:
 	DisplayManager* _dm;
 
-	std::shared_ptr<BackgroundImage> _bg_image;
+	BackgroundImage _bg_image;
 	std::vector<std::shared_ptr<Widget>> _widgets;
 };
 
