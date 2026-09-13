@@ -1,27 +1,6 @@
 #include "PowerManager.h"
 
 
-void PowerManagerBase::add_wake_pin(uint8_t pin, uint8_t reason)
-{
-}
-
-void PowerManagerBase::print_reset_reason()
-{
-}
-
-void PowerManagerBase::power_off()
-{
-}
-
-void PowerManagerBase::reset()
-{
-}
-
-void PowerManagerBase::enterBootloader()
-{
-}
-
-
 std::set<irq_pin_cfg> NRFPowerManager::_wake_pins;
 
 void NRFPowerManager::add_wake_pin(uint8_t pin, uint8_t reason)

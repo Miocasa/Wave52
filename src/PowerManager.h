@@ -27,13 +27,13 @@ public:
 	PowerManagerBase() = default;
 	virtual ~PowerManagerBase() = default;
 
-	virtual void add_wake_pin(uint8_t pin, uint8_t reason);
-	virtual void print_reset_reason();
-	virtual void power_off();
-	virtual void reset();
-	virtual void enterBootloader();
+	virtual void add_wake_pin(uint8_t pin, uint8_t reason) = 0;
+	virtual void print_reset_reason() = 0;
+	virtual void power_off() = 0;
+	virtual void reset() = 0;
+	virtual void enterBootloader() = 0;
 };
-
+#ifdef ARDUINO_ARCH_NRF52
 class NRFPowerManager : PowerManagerBase
 {
 public:
@@ -51,6 +51,7 @@ public:
 private:
 	static std::set<irq_pin_cfg> _wake_pins;
 };
+#endif
 
 
 #endif //EINK_NRFPOWERMANAGER_H
