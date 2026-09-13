@@ -21,18 +21,19 @@ ExternalRTC externalRTC;
 NRFPowerManager power;
 WidgetManager widgetManager(&display);
 SaveManager saveManager;
+settings_t settings;
 
 bool btn_st = false;
+bool rtc_st = false;
 
 void button_irq()
 {
-	Serial.println("Button IRQ");
 	btn_st = true;
 }
 
 void ds3231_irq()
 {
-	Serial.println("DS3231 IRQ");
+	rtc_st = true;
 }
 
 bool configure_nfc_pins()
@@ -74,17 +75,19 @@ void setup()
 	// {
 	// }
 
+
 	externalRTC.begin();
 
 	configure_nfc_pins();
 
 	saveManager.begin();
+	widgetManager.loadLastScreen();
 
 	SPI.begin();
 	display.init(115200, true, 50, false);
 	display.setRotation(0);
 
-	display.update();
+	widgetManager.draw(); // display.update();
 	// showTimePartial();
 }
 
@@ -121,18 +124,29 @@ void loop()
 			Serial.println("Failed to load \"" + path);
 		prv_time = now;
 		break;
+	case 'd':
+		// widgetManager.test();
+		widgetManager.loadDefaultScreen();
+
+
+		break;
 	default: break;
 	}
 
-	if (btn_st)
+
+	if (rtc_st) Serial.println("DS3231 IRQ");
+	if (btn_st) Serial.println("Button IRQ");
+	if (btn_st || rtc_st)
 	{
 		prv_time = now;
 		btn_st = false;
+		rtc_st = false;
+
 		display.update();
 	}
 
 
-	if (now - prv_time > SLEEP_DELAY_MS)
+	if (now - prv_time > SLEEP_TIMEOUT)
 	{
 		power.power_off();
 	}
