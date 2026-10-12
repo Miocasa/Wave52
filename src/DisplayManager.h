@@ -5,39 +5,46 @@
 #ifndef EINK_DISPLAYMANAGER_H
 #define EINK_DISPLAYMANAGER_H
 #include <config.h>
+
+#include "GxEPD2_4G_BW.h"
 #include "display_detection.h"
 // #include <Externs.h>
 // struct
 
+class DisplayEpdHolder {
+ public:
+  virtual ~DisplayEpdHolder() = default;
 
-class DisplayEpdHolder
-{
-public:
-	virtual ~DisplayEpdHolder() = default;
+ protected:
+  DisplayEpdHolder(int16_t cs, int16_t dc, int16_t rst, int16_t busy) : _epd(cs, dc, rst, busy) {}
 
-protected:
-	DisplayEpdHolder(int16_t cs, int16_t dc, int16_t rst, int16_t busy)
-		: _epd(cs, dc, rst, busy)
-	{
-	}
-
-	_display _epd;
+  _display _epd;
 };
 
+class DisplayManager : private DisplayEpdHolder,
+                       public _displayBase<_display, _display::HEIGHT / 3> {
+ public:
+  DisplayManager(int16_t cs, int16_t dc, int16_t rst, int16_t busy);
+  ~DisplayManager() override = default;
 
-class DisplayManager : private DisplayEpdHolder, public _displayBase<_display, _display::HEIGHT>
-{
-public:
-	DisplayManager(int16_t cs, int16_t dc, int16_t rst, int16_t busy);
-	~DisplayManager() override = default;
+  // void drawWidgets();
+  void update();
 
-	// void drawWidgets();
-	void update();
-
-	void writeImage_4G(const uint8_t* bitmap, uint8_t bpp,
-	                   int16_t x, int16_t y, int16_t w, int16_t h,
-	                   bool invert = false, bool mirror_y = false, bool pgm = false);
+  void writeImage_4G(const uint8_t *bitmap, uint8_t bpp, int16_t x, int16_t y, int16_t w, int16_t h,
+                     bool invert = false, bool mirror_y = false, bool pgm = false);
 };
 
+class DisplayManager_BW : private DisplayEpdHolder,
+                          public GxEPD2_4G_BW_R<_display, _display::HEIGHT / 3> {
+ public:
+  DisplayManager_BW(int16_t cs, int16_t dc, int16_t rst, int16_t busy);
+  ~DisplayManager_BW() override = default;
 
-#endif //EINK_DISPLAYMANAGER_H
+  // void drawWidgets();
+  void update();
+
+  void writeImage_4G(const uint8_t *bitmap, uint8_t bpp, int16_t x, int16_t y, int16_t w, int16_t h,
+                     bool invert = false, bool mirror_y = false, bool pgm = false);
+};
+
+#endif // EINK_DISPLAYMANAGER_H
