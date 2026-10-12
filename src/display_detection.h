@@ -1,5 +1,6 @@
 #pragma once
 #include <config.h>
+
 #include "GxEPD2_4G_4G.h"
 // #include "GxEPD2.get_h"
 
@@ -9,5 +10,3 @@
 #else
 #error Display must be defined in config.get_h
 #endif
-
-
