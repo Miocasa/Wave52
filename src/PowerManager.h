@@ -3,55 +3,37 @@
 #define EINK_NRFPOWERMANAGER_H
 #include <Arduino.h>
 #include <bluefruit.h>
+
 #include <set>
 
-struct irq_pin_cfg
-{
-	uint8_t pin;
-	uint8_t reason;
+struct irq_pin_cfg {
+  uint8_t pin;
+  uint8_t reason;
 
-	bool operator<(const irq_pin_cfg& other) const
-	{
-		return pin < other.pin;
-	}
+  bool operator<(const irq_pin_cfg& other) const {
+    return pin < other.pin;
+  }
 
-	bool operator==(const irq_pin_cfg& other) const
-	{
-		return pin == other.pin && reason == other.reason;
-	}
+  bool operator==(const irq_pin_cfg& other) const {
+    return pin == other.pin && reason == other.reason;
+  }
 };
 
-class PowerManagerBase
-{
-public:
-	PowerManagerBase() = default;
-	virtual ~PowerManagerBase() = default;
-
-	virtual void add_wake_pin(uint8_t pin, uint8_t reason) = 0;
-	virtual void print_reset_reason() = 0;
-	virtual void power_off() = 0;
-	virtual void reset() = 0;
-	virtual void enterBootloader() = 0;
-};
 #ifdef ARDUINO_ARCH_NRF52
-class NRFPowerManager : PowerManagerBase
-{
-public:
-	NRFPowerManager() = default;
-	~NRFPowerManager() override = default;
+namespace NRFPowerManager {
+  void setup_battery();
+  uint16_t read_battery_mv();
+  uint8_t read_battery();
+  void disconnectBle();
+  void ble_sleep();
 
-
-	void add_wake_pin(uint8_t pin, uint8_t reason) override;
-	void print_reset_reason() override;
-
-	void power_off() override;
-	void reset() override;
-	void enterBootloader() override;
-
-private:
-	static std::set<irq_pin_cfg> _wake_pins;
-};
+  void add_wake_pin(uint8_t pin, uint8_t reason);
+  void print_reset_reason();
+  void sleep();
+  void power_off();
+  void reset();
+  void enterBootloader();
+}; // namespace NRFPowerManager
 #endif
 
-
-#endif //EINK_NRFPOWERMANAGER_H
+#endif // EINK_NRFPOWERMANAGER_H
