@@ -2,3 +2,5 @@
 .vscode
 *.jpg
 *.png
+*.uf2
+*.bin
