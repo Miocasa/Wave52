@@ -48,7 +48,7 @@ def fit_image(img, target_w, target_h, mode="cover", bg_color=255):
 TARGET_W, TARGET_H = 400, 300
 MODE = "contain"  # "cover" | "contain" | "stretch"
 
-img = Image.open("/home/miocasa/Pictures/Twitter/20260309_011701.jpg").convert("L")  # .rotate(90)
+img = Image.open("/home/miocasa/Pictures/QuickShare/HUB4s4VWEAAON7v.jpg").convert("L")  # .rotate(90)
 img = fit_image(img, TARGET_W, TARGET_H, mode=MODE, bg_color=255)
 
 w, h = img.size
@@ -65,7 +65,7 @@ for j in range(h):
         idx = j * byte_width + i // 4
         data[idx] |= (level2 << shift)
 
-with open("src/image_2bpp.h", "w") as f:
+with open("src/default_bitmap_2bit.h", "w") as f:
     f.write(f"const unsigned char my_2bpp_bitmap[] = {{\n")
     f.write(", ".join(str(b) for b in data))
     f.write("\n};\n")
