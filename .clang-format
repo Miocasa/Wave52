@@ -1,0 +1,16 @@
+BasedOnStyle: Google
+
+# --- Overrides ---
+ColumnLimit: 100
+NamespaceIndentation: All
+IndentWidth: 2
+ContinuationIndentWidth: 4
+PointerAlignment: Left
+AccessModifierOffset: -1
+
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLoopsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: Empty
+
+# Space
+SpacesBeforeTrailingComments: 1
