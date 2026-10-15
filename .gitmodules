@@ -1,0 +1,6 @@
+[submodule "app/third_party/QmlMaterial"]
+	path = app/third_party/QmlMaterial
+	url = https://github.com/hypengw/QmlMaterial
+[submodule "assets/Fonts/Monocraft"]
+	path = assets/Fonts/Monocraft
+	url = https://github.com/IdreesInc/Monocraft.git

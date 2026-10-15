@@ -1,0 +1,9 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/miocasa/platformio-projects/eink/app/build-android/cmake_install.cmake",
+		"/home/miocasa/platformio-projects/eink/app/build-android/third_party/QmlMaterial/cmake_install.cmake",
+		"/home/miocasa/platformio-projects/eink/app/build-android/third_party/QmlMaterial/third_party/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

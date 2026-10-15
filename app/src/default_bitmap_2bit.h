@@ -1,0 +1,1 @@
+/home/miocasa/platformio-projects/Wave52/src/default_bitmap_2bit.h

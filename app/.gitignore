@@ -1,0 +1,6 @@
+build
+build-android
+build-linux
+cmake-build-debug
+cmake-build-release
+*bak

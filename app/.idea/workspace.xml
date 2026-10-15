@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BackendCodeEditorMiscSettings">
+    <option name="/Default/Environment/Hierarchy/GeneratedFilesCacheKey/Timestamp/@EntryValue" value="31" type="long" />
+    <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
+    <option name="/Default/Housekeeping/GlobalSettingsUpgraded/IsUpgraded/@EntryValue" value="true" type="bool" />
+    <option name="/Default/Housekeeping/LiveTemplatesHousekeeping/HotspotSessionHintIsShown/@EntryValue" value="true" type="bool" />
+    <option name="/Default/Housekeeping/OptionsDialog/SelectedPageId/@EntryValue" value="CppFormatterOtherPage" type="string" />
+    <option name="/Default/RiderDebugger/RiderRestoreDecompile/RestoreDecompileSetting/@EntryValue" value="false" type="bool" />
+  </component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
+  <component name="CMakeProjectFlavorService">
+    <option name="flavorId" value="CMakePlainProjectFlavor" />
+  </component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated>
+      <config projectName="wave52" targetName="material_color" />
+      <config projectName="wave52" targetName="qml_material_copy_qml" folderName="QtInternalTargets" />
+      <config projectName="wave52" targetName="module_qml_material_aotstats_target" folderName="QtInternalTargets" />
+      <config projectName="wave52" targetName="generate_finalqtconf_wave52" folderName="QtInternalTargets" />
+      <config projectName="wave52" targetName="wave52_qmltyperegistration" folderName="QtInternalTargets" />
+      <config projectName="wave52" targetName="wave52_copy_res" folderName="QtInternalTargets" />
+      <config projectName="wave52" targetName="qml_material_layouts_copy_res" folderName="QtInternalTargets" />
+      <config projectName="wave52" targetName="wave52_qmlimportscan" folderName="QtInternalTargets" />
+      <config projectName="wave52" targetName="qml_material_qmltyperegistration" folderName="QtInternalTargets" />
+      <config projectName="wave52" targetName="qml_material_copy_res" folderName="QtInternalTargets" />
+      <config projectName="wave52" targetName="all_aotstats" folderName="QtInternalTargets" />
+      <config projectName="wave52" targetName="all_qmllint_json" folderName="QtInternalTargets/QmlLinter" />
+      <config projectName="wave52" targetName="dump_qml_context_properties" folderName="QtInternalTargets" />
+      <config projectName="wave52" targetName="all_qmllint_module" folderName="QtInternalTargets/QmlLinter" />
+      <config projectName="wave52" targetName="qml_material_qmllint_module" folderName="QtInternalTargets/QmlLinter" />
+      <config projectName="wave52" targetName="qml_material_layouts_qmltyperegistration" folderName="QtInternalTargets" />
+      <config projectName="wave52" targetName="wave52_qmllint" folderName="QtInternalTargets/QmlLinter" />
+      <config projectName="wave52" targetName="wave52_qmlpreview" folderName="QtInternalTargets/QmlPreview" />
+      <config projectName="wave52" targetName="qt_internal_plugins" folderName="QtInternalTargets" />
+      <config projectName="wave52" targetName="qml_material_qmllint" folderName="QtInternalTargets/QmlLinter" />
+      <config projectName="wave52" targetName="all_qmllint" folderName="QtInternalTargets/QmlLinter" />
+      <config projectName="wave52" targetName="qml_material_layouts_copy_qml" folderName="QtInternalTargets" />
+      <config projectName="wave52" targetName="qml_material_layouts_qmllint_json" folderName="QtInternalTargets/QmlLinter" />
+      <config projectName="wave52" targetName="qml_material_layouts_generate_qmlls_ini_file" />
+      <config projectName="wave52" targetName="wave52_generate_qmlls_ini_file" />
+      <config projectName="wave52" targetName="qml_material" />
+      <config projectName="wave52" targetName="qml_material_layouts_qmllint" folderName="QtInternalTargets/QmlLinter" />
+      <config projectName="wave52" targetName="all_qmltyperegistrations" folderName="QtInternalTargets" />
+      <config projectName="wave52" targetName="wave52_qmllint_json" folderName="QtInternalTargets/QmlLinter" />
+      <config projectName="wave52" targetName="clean_qml_context_properties" folderName="QtInternalTargets" />
+      <config projectName="wave52" targetName="qml_material_qmllint_json" folderName="QtInternalTargets/QmlLinter" />
+      <config projectName="wave52" targetName="wave52" />
+      <config projectName="wave52" targetName="module_wave52_aotstats_target" folderName="QtInternalTargets" />
+      <config projectName="wave52" targetName="qml_material_layoutsplugin" />
+      <config projectName="wave52" targetName="wave52_copy_qml" folderName="QtInternalTargets" />
+      <config projectName="wave52" targetName="adafruit_gfx" />
+      <config projectName="wave52" targetName="generate_qmlls_build_ini_file" folderName="QtInternalTargets" />
+      <config projectName="wave52" targetName="qml_materialplugin" />
+      <config projectName="wave52" targetName="qml_material_layouts_qmllint_module" folderName="QtInternalTargets/QmlLinter" />
+      <config projectName="wave52" targetName="wave52_qmllint_module" folderName="QtInternalTargets/QmlLinter" />
+      <config projectName="wave52" targetName="qml_material_layouts" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+      <configuration PROFILE_NAME="Release" ENABLED="true" CONFIG_NAME="Release" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="53b00766-229e-48e3-bfed-ce5ea9aaf5b4" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../.clang-format" beforeDir="false" afterPath="$PROJECT_DIR$/../.clang-format" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/editor.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flash.uf2" beforeDir="false" afterPath="$PROJECT_DIR$/../flash.uf2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/BLE/BLEManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../src/BLE/BLEManager.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/BLE/BLEManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/../src/BLE/BLEManager.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/Fonts/gomarice_no_continue9pt7b.h" beforeDir="false" afterPath="$PROJECT_DIR$/../src/Fonts/gomarice_no_continue9pt7b.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/PowerManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../src/PowerManager.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/Protocol.h" beforeDir="false" afterPath="$PROJECT_DIR$/../src/Protocol.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/Settings/SaveManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../src/Settings/SaveManager.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/Settings/SaveManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/../src/Settings/SaveManager.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/Widgets/BackgroundImage.h" beforeDir="false" afterPath="$PROJECT_DIR$/../src/Widgets/BackgroundImage.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/Widgets/FontManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/../src/Widgets/FontManager.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/Widgets/Widget.h" beforeDir="false" afterPath="$PROJECT_DIR$/../src/Widgets/Widget.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/Widgets/WidgetManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../src/Widgets/WidgetManager.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/Widgets/WidgetManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/../src/Widgets/WidgetManager.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/config.h" beforeDir="false" afterPath="$PROJECT_DIR$/../src/config.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main.cpp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="1729" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Miocasa&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Miocasa/Wave52.git&quot;,
+    &quot;accountId&quot;: &quot;f0594f46-5f61-4e1f-bde3-1b4d9411a658&quot;
+  }
+}</component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="jcOKNSlF" />
+  </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2025" />
+    <option name="minorVersion" value="3.1.1" />
+    <option name="productBranch" value="Classic" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="3KdSCNilSo2LFnctBWx6BORipQW" />
+  <component name="ProjectStatusUIService">{
+  &quot;uiKindId&quot;: &quot;Widget&quot;
+}</component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "CMake Application.wave52.executor": "Run",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.RadMigrateCodeStyle": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "bazel.project.detector.is.bazel.project": "true",
+    "cf.advertisement.text.overridden": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "js.last.introduce.type": "CONST",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "/home/miocasa/platformio-projects/eink/app/qml/Widgets",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "org.rust.first.attach.projects": "true",
+    "settings.editor.selected.configurable": "language.qml",
+    "to.speed.mode.migration.done": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/qml/Widgets" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/qml/Screens" />
+      <recent name="$PROJECT_DIR$/qml" />
+      <recent name="$PROJECT_DIR$/qml/references" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Image" />
+      <recent name="$PROJECT_DIR$/src/Models" />
+      <recent name="$PROJECT_DIR$/qml/references" />
+      <recent name="$PROJECT_DIR$/qml/Layout" />
+      <recent name="$PROJECT_DIR$/qml" />
+    </key>
+  </component>
+  <component name="RunManager" selected="CMake Application.wave52">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="adafruit_gfx" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="wave52" TARGET_NAME="adafruit_gfx" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="all_aotstats" type="CMakeRunConfiguration" factoryName="Application" folderName="QtInternalTargets" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="wave52" TARGET_NAME="all_aotstats" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="all_qmllint" type="CMakeRunConfiguration" factoryName="Application" folderName="QtInternalTargets/QmlLinter" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="wave52" TARGET_NAME="all_qmllint" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="all_qmllint_json" type="CMakeRunConfiguration" factoryName="Application" folderName="QtInternalTargets/QmlLinter" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="wave52" TARGET_NAME="all_qmllint_json" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="all_qmllint_module" type="CMakeRunConfiguration" factoryName="Application" folderName="QtInternalTargets/QmlLinter" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="wave52" TARGET_NAME="all_qmllint_module" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="all_qmltyperegistrations" type="CMakeRunConfiguration" factoryName="Application" folderName="QtInternalTargets" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="wave52" TARGET_NAME="all_qmltyperegistrations" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="clean_qml_context_properties" type="CMakeRunConfiguration" factoryName="Application" folderName="QtInternalTargets" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="wave52" TARGET_NAME="clean_qml_context_properties" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="dump_qml_context_properties" type="CMakeRunConfiguration" factoryName="Application" folderName="QtInternalTargets" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="wave52" TARGET_NAME="dump_qml_context_properties" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="generate_finalqtconf_wave52" type="CMakeRunConfiguration" factoryName="Application" folderName="QtInternalTargets" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="wave52" TARGET_NAME="generate_finalqtconf_wave52" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="generate_qmlls_build_ini_file" type="CMakeRunConfiguration" factoryName="Application" folderName="QtInternalTargets" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="wave52" TARGET_NAME="generate_qmlls_build_ini_file" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="material_color" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="wave52" TARGET_NAME="material_color" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="module_qml_material_aotstats_target" type="CMakeRunConfiguration" factoryName="Application" folderName="QtInternalTargets" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="wave52" TARGET_NAME="module_qml_material_aotstats_target" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="module_wave52_aotstats_target" type="CMakeRunConfiguration" factoryName="Application" folderName="QtInternalTargets" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="wave52" TARGET_NAME="module_wave52_aotstats_target" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="qml_material" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="wave52" TARGET_NAME="qml_material" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="qml_material_copy_qml" type="CMakeRunConfiguration" factoryName="Application" folderName="QtInternalTargets" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="wave52" TARGET_NAME="qml_material_copy_qml" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="qml_material_copy_res" type="CMakeRunConfiguration" factoryName="Application" folderName="QtInternalTargets" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="wave52" TARGET_NAME="qml_material_copy_res" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="qml_material_layouts" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="wave52" TARGET_NAME="qml_material_layouts" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="qml_material_layouts_copy_qml" type="CMakeRunConfiguration" factoryName="Application" folderName="QtInternalTargets" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="wave52" TARGET_NAME="qml_material_layouts_copy_qml" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="qml_material_layouts_copy_res" type="CMakeRunConfiguration" factoryName="Application" folderName="QtInternalTargets" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="wave52" TARGET_NAME="qml_material_layouts_copy_res" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="qml_material_layouts_generate_qmlls_ini_file" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="wave52" TARGET_NAME="qml_material_layouts_generate_qmlls_ini_file" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="qml_material_layouts_qmllint" type="CMakeRunConfiguration" factoryName="Application" folderName="QtInternalTargets/QmlLinter" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="wave52" TARGET_NAME="qml_material_layouts_qmllint" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="qml_material_layouts_qmllint_json" type="CMakeRunConfiguration" factoryName="Application" folderName="QtInternalTargets/QmlLinter" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="wave52" TARGET_NAME="qml_material_layouts_qmllint_json" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="qml_material_layouts_qmllint_module" type="CMakeRunConfiguration" factoryName="Application" folderName="QtInternalTargets/QmlLinter" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="wave52" TARGET_NAME="qml_material_layouts_qmllint_module" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="qml_material_layouts_qmltyperegistration" type="CMakeRunConfiguration" factoryName="Application" folderName="QtInternalTargets" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="wave52" TARGET_NAME="qml_material_layouts_qmltyperegistration" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="qml_material_layoutsplugin" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="wave52" TARGET_NAME="qml_material_layoutsplugin" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="qml_material_qmllint" type="CMakeRunConfiguration" factoryName="Application" folderName="QtInternalTargets/QmlLinter" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="wave52" TARGET_NAME="qml_material_qmllint" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="qml_material_qmllint_json" type="CMakeRunConfiguration" factoryName="Application" folderName="QtInternalTargets/QmlLinter" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="wave52" TARGET_NAME="qml_material_qmllint_json" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="qml_material_qmllint_module" type="CMakeRunConfiguration" factoryName="Application" folderName="QtInternalTargets/QmlLinter" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="wave52" TARGET_NAME="qml_material_qmllint_module" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="qml_material_qmltyperegistration" type="CMakeRunConfiguration" factoryName="Application" folderName="QtInternalTargets" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="wave52" TARGET_NAME="qml_material_qmltyperegistration" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="qml_materialplugin" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="wave52" TARGET_NAME="qml_materialplugin" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="qt_internal_plugins" type="CMakeRunConfiguration" factoryName="Application" folderName="QtInternalTargets" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="wave52" TARGET_NAME="qt_internal_plugins" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="wave52" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="wave52" TARGET_NAME="wave52" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="wave52" RUN_TARGET_NAME="wave52">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="wave52_copy_qml" type="CMakeRunConfiguration" factoryName="Application" folderName="QtInternalTargets" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="wave52" TARGET_NAME="wave52_copy_qml" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="wave52_copy_res" type="CMakeRunConfiguration" factoryName="Application" folderName="QtInternalTargets" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="wave52" TARGET_NAME="wave52_copy_res" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="wave52_generate_qmlls_ini_file" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="wave52" TARGET_NAME="wave52_generate_qmlls_ini_file" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="wave52_qmlimportscan" type="CMakeRunConfiguration" factoryName="Application" folderName="QtInternalTargets" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="wave52" TARGET_NAME="wave52_qmlimportscan" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="wave52_qmllint" type="CMakeRunConfiguration" factoryName="Application" folderName="QtInternalTargets/QmlLinter" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="wave52" TARGET_NAME="wave52_qmllint" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="wave52_qmllint_json" type="CMakeRunConfiguration" factoryName="Application" folderName="QtInternalTargets/QmlLinter" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="wave52" TARGET_NAME="wave52_qmllint_json" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="wave52_qmllint_module" type="CMakeRunConfiguration" factoryName="Application" folderName="QtInternalTargets/QmlLinter" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="wave52" TARGET_NAME="wave52_qmllint_module" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="wave52_qmlpreview" type="CMakeRunConfiguration" factoryName="Application" folderName="QtInternalTargets/QmlPreview" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="wave52" TARGET_NAME="wave52_qmlpreview" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="wave52_qmltyperegistration" type="CMakeRunConfiguration" factoryName="Application" folderName="QtInternalTargets" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="wave52" TARGET_NAME="wave52_qmltyperegistration" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="CMake Application.all_aotstats" />
+      <item itemvalue="CMake Application.generate_finalqtconf_wave52" />
+      <item itemvalue="CMake Application.generate_qmlls_build_ini_file" />
+      <item itemvalue="CMake Application.module_qml_material_aotstats_target" />
+      <item itemvalue="CMake Application.module_wave52_aotstats_target" />
+      <item itemvalue="CMake Application.wave52_copy_qml" />
+      <item itemvalue="CMake Application.wave52_copy_res" />
+      <item itemvalue="CMake Application.wave52_qmlimportscan" />
+      <item itemvalue="CMake Application.wave52_qmltyperegistration" />
+      <item itemvalue="CMake Application.all_qmltyperegistrations" />
+      <item itemvalue="CMake Application.clean_qml_context_properties" />
+      <item itemvalue="CMake Application.dump_qml_context_properties" />
+      <item itemvalue="CMake Application.qml_material_copy_qml" />
+      <item itemvalue="CMake Application.qml_material_copy_res" />
+      <item itemvalue="CMake Application.qml_material_layouts_copy_qml" />
+      <item itemvalue="CMake Application.qml_material_layouts_copy_res" />
+      <item itemvalue="CMake Application.qml_material_layouts_qmltyperegistration" />
+      <item itemvalue="CMake Application.qml_material_qmltyperegistration" />
+      <item itemvalue="CMake Application.qt_internal_plugins" />
+      <item itemvalue="CMake Application.qml_material_layouts_qmllint" />
+      <item itemvalue="CMake Application.qml_material_layouts_qmllint_json" />
+      <item itemvalue="CMake Application.qml_material_layouts_qmllint_module" />
+      <item itemvalue="CMake Application.qml_material_qmllint" />
+      <item itemvalue="CMake Application.qml_material_qmllint_json" />
+      <item itemvalue="CMake Application.qml_material_qmllint_module" />
+      <item itemvalue="CMake Application.wave52_qmllint" />
+      <item itemvalue="CMake Application.wave52_qmllint_json" />
+      <item itemvalue="CMake Application.wave52_qmllint_module" />
+      <item itemvalue="CMake Application.all_qmllint" />
+      <item itemvalue="CMake Application.all_qmllint_json" />
+      <item itemvalue="CMake Application.all_qmllint_module" />
+      <item itemvalue="CMake Application.wave52_qmlpreview" />
+      <item itemvalue="CMake Application.qml_material" />
+      <item itemvalue="CMake Application.qml_material_layouts" />
+      <item itemvalue="CMake Application.qml_material_layouts_generate_qmlls_ini_file" />
+      <item itemvalue="CMake Application.qml_material_layoutsplugin" />
+      <item itemvalue="CMake Application.qml_materialplugin" />
+      <item itemvalue="CMake Application.material_color" />
+      <item itemvalue="CMake Application.wave52_generate_qmlls_ini_file" />
+      <item itemvalue="CMake Application.adafruit_gfx" />
+      <item itemvalue="CMake Application.wave52" />
+    </list>
+  </component>
+  <component name="RustProjectSettings">
+    <option name="toolchainHomeDirectory" value="/usr/bin" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="53b00766-229e-48e3-bfed-ce5ea9aaf5b4" name="Changes" comment="" />
+      <created>1791885823615</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1791885823615</updated>
+      <workItem from="1791885825222" duration="6186000" />
+      <workItem from="1791892049808" duration="5936000" />
+      <workItem from="1791962963744" duration="745000" />
+      <workItem from="1792004683406" duration="5624000" />
+      <workItem from="1792168116038" duration="58995000" />
+      <workItem from="1792346090644" duration="5506000" />
+      <workItem from="1792437603373" duration="35977000" />
+      <workItem from="1792513543562" duration="7489000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.conf" />
+  </component>
+  <component name="VCPKGProject">
+    <isAutomaticCheckingOnLaunch value="false" />
+    <isAutomaticFoundErrors value="true" />
+    <isAutomaticReloadCMake value="true" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
